@@ -78,9 +78,10 @@ function setRandomBackground() {
     const randomBackground = Background[randomIndex];
 
     // 判断当前环境并设置背景图像
-    const isGitHubPages = window.location.hostname === 'TimemachineT.github.io';
-    const baseUrl = isGitHubPages ? 'https://TimemachineT.github.io/' : 'http://localhost:4000/';
-    
+   // const isGitHubPages = window.location.hostname === 'TimemachineT.github.io';
+   // const baseUrl = isGitHubPages ? 'https://TimemachineT.github.io/' : 'http://localhost:4000/';
+    const baseUrl =  'https://TimemachineT.github.io/' ;
+
     document.body.style.backgroundImage = `url(${baseUrl}${randomBackground})`;
 }
 
