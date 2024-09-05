@@ -49,6 +49,48 @@
 
 
 
+<script>
+const Background = [
+    "image/background/960px-CGSS-Yukimi-SR-1+.png", 
+    "image/background/960px-CGSS-Yukimi-SR-1.png",
+    "image/background/960px-CGSS-Yukimi-SR-2+.png", 
+    "image/background/960px-CGSS-Yukimi-SR-2.png",
+    "image/background/960px-CGSS-Yukimi-SR-3+.png", 
+    "image/background/960px-CGSS-Yukimi-SR-3.png",
+    "image/background/960px-CGSS-Yukimi-SR-4+.png", 
+    "image/background/960px-CGSS-Yukimi-SR-4.png",
+    "image/background/960px-CGSS-Yukimi-SR-5+.png", 
+    "image/background/960px-CGSS-Yukimi-SR-5.png",
+    "image/background/960px-CGSS-Yukimi-SR-6+.png", 
+    "image/background/960px-CGSS-Yukimi-SR-6.png",
+    "image/background/960px-CGSS-Yukimi-SR-7+.png", 
+    "image/background/960px-CGSS-Yukimi-SR-7.png",
+    "image/background/960px-CGSS-Yukimi-SSR-1+.png", 
+    "image/background/960px-CGSS-Yukimi-SSR-1.png",
+    "image/background/960px-CGSS-Yukimi-SSR-2+.png", 
+    "image/background/960px-CGSS-Yukimi-SSR-2.png",
+    "image/background/960px-CGSS-Yukimi-SSR-3+.png", 
+    "image/background/960px-CGSS-Yukimi-SSR-3.png",
+    "image/background/960px-CGSS-Yukimi-SSR-4+.png", 
+    "image/background/960px-CGSS-Yukimi-SSR-4.png",
+    "image/background/960px-CGSS-Yukimi-SSR-5+.png", 
+    "image/background/960px-CGSS-Yukimi-SSR-5.png"
+];
+
+function setRandomBackground() {
+    const randomIndex = Math.floor(Math.random() * Background.length);
+    const randomBackground = Background[randomIndex];
+
+    // 判断当前环境并设置背景图像
+    const isGitHubPages = window.location.hostname === 'TimemachineT.github.io';
+    const baseUrl = isGitHubPages ? 'https://TimemachineT.github.io/' : 'http://localhost:4000/';
+    
+    document.body.style.backgroundImage = `url(${baseUrl}${randomBackground})`;
+}
+
+// 在页面加载时调用函数设置随机背景
+window.onload = setRandomBackground;
+</script>
   <noscript>
     <link rel="stylesheet" href="/css/noscript.css">
   </noscript>
@@ -72,6 +114,7 @@
       <p class="site-title">佐城雪美</p>
       <i class="logo-line"></i>
     </a>
+      <p class="site-subtitle" itemprop="description">…和你的…约定…要实现哦…</p>
   </div>
 
   <div class="site-nav-right">
@@ -111,7 +154,7 @@
         <div class="site-overview-wrap sidebar-panel">
           <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
   <p class="site-author-name" itemprop="name">Kolmisilmä</p>
-  <div class="site-description" itemprop="description">…和你的…约定…要实现哦…</div>
+  <div class="site-description" itemprop="description"></div>
 </div>
 <div class="site-state-wrap animated">
   <nav class="site-state">
@@ -154,7 +197,7 @@
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="佐城雪美">
-      <meta itemprop="description" content="…和你的…约定…要实现哦…">
+      <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">

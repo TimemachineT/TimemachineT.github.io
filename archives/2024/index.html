@@ -19,12 +19,10 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.20.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="…和你的…约定…要实现哦…">
-<meta property="og:type" content="website">
+    <meta property="og:type" content="website">
 <meta property="og:title" content="佐城雪美">
 <meta property="og:url" content="http://example.com/archives/2024/index.html">
 <meta property="og:site_name" content="佐城雪美">
-<meta property="og:description" content="…和你的…约定…要实现哦…">
 <meta property="og:locale" content="en_US">
 <meta property="article:author" content="Kolmisilmä">
 <meta name="twitter:card" content="summary">
@@ -47,6 +45,48 @@
 
 
 
+<script>
+const Background = [
+    "image/background/960px-CGSS-Yukimi-SR-1+.png", 
+    "image/background/960px-CGSS-Yukimi-SR-1.png",
+    "image/background/960px-CGSS-Yukimi-SR-2+.png", 
+    "image/background/960px-CGSS-Yukimi-SR-2.png",
+    "image/background/960px-CGSS-Yukimi-SR-3+.png", 
+    "image/background/960px-CGSS-Yukimi-SR-3.png",
+    "image/background/960px-CGSS-Yukimi-SR-4+.png", 
+    "image/background/960px-CGSS-Yukimi-SR-4.png",
+    "image/background/960px-CGSS-Yukimi-SR-5+.png", 
+    "image/background/960px-CGSS-Yukimi-SR-5.png",
+    "image/background/960px-CGSS-Yukimi-SR-6+.png", 
+    "image/background/960px-CGSS-Yukimi-SR-6.png",
+    "image/background/960px-CGSS-Yukimi-SR-7+.png", 
+    "image/background/960px-CGSS-Yukimi-SR-7.png",
+    "image/background/960px-CGSS-Yukimi-SSR-1+.png", 
+    "image/background/960px-CGSS-Yukimi-SSR-1.png",
+    "image/background/960px-CGSS-Yukimi-SSR-2+.png", 
+    "image/background/960px-CGSS-Yukimi-SSR-2.png",
+    "image/background/960px-CGSS-Yukimi-SSR-3+.png", 
+    "image/background/960px-CGSS-Yukimi-SSR-3.png",
+    "image/background/960px-CGSS-Yukimi-SSR-4+.png", 
+    "image/background/960px-CGSS-Yukimi-SSR-4.png",
+    "image/background/960px-CGSS-Yukimi-SSR-5+.png", 
+    "image/background/960px-CGSS-Yukimi-SSR-5.png"
+];
+
+function setRandomBackground() {
+    const randomIndex = Math.floor(Math.random() * Background.length);
+    const randomBackground = Background[randomIndex];
+
+    // 判断当前环境并设置背景图像
+    const isGitHubPages = window.location.hostname === 'TimemachineT.github.io';
+    const baseUrl = isGitHubPages ? 'https://TimemachineT.github.io/' : 'http://localhost:4000/';
+    
+    document.body.style.backgroundImage = `url(${baseUrl}${randomBackground})`;
+}
+
+// 在页面加载时调用函数设置随机背景
+window.onload = setRandomBackground;
+</script>
   <noscript>
     <link rel="stylesheet" href="/css/noscript.css">
   </noscript>
@@ -70,6 +110,7 @@
       <h1 class="site-title">佐城雪美</h1>
       <i class="logo-line"></i>
     </a>
+      <p class="site-subtitle" itemprop="description">…和你的…约定…要实现哦…</p>
   </div>
 
   <div class="site-nav-right">
@@ -108,7 +149,7 @@
         <div class="site-overview-wrap sidebar-panel">
           <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
   <p class="site-author-name" itemprop="name">Kolmisilmä</p>
-  <div class="site-description" itemprop="description">…和你的…约定…要实现哦…</div>
+  <div class="site-description" itemprop="description"></div>
 </div>
 <div class="site-state-wrap animated">
   <nav class="site-state">
